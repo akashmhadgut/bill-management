@@ -21,7 +21,7 @@ export const SocketProvider = ({ children }) => {
     }
 
     // create socket with auth token
-    const url = import.meta.env.VITE_API_BASE || 'http://localhost:5000'
+    const url = import.meta.env.VITE_API_BASE || 'https://bill-management-zmka.onrender.com'
     const s = io(url, { auth: { token } })
 
     function onConnect() { setConnected(true) }

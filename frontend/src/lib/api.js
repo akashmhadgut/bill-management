@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000'
+// default to the deployed backend; can be overridden with .env VITE_API_BASE
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://bill-management-zmka.onrender.com'
 
 const api = axios.create({
   baseURL: API_BASE,

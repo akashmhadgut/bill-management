@@ -22,7 +22,17 @@ npm install
 npm run dev
 ```
 
-The frontend expects the backend API at `http://localhost:5000` by default. You can override this by creating a `.env` file with `VITE_API_BASE`.
+The frontend can talk to a deployed backend through the `VITE_API_BASE` environment variable. By default this project now points to the deployed backend at:
+
+```
+https://bill-management-zmka.onrender.com
+```
+
+If you want to run locally against a different backend during development, create a `.env` file (or update it) in the `frontend/` folder with:
+
+```
+VITE_API_BASE=http://localhost:5000
+```
 
 Implemented features
 - Login page — stores JWT in localStorage, decodes role to route users
